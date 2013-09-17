@@ -1,0 +1,213 @@
+// Paleta kolorów
+$white:         #FFF
+$turquoise:     #1abc9c
+$emerland:      #2ecc71
+$peter-river:   #3498db
+$amethyst:      #9b59b6
+$wet-asphalt:   #34495e
+$green-sea:     #16a085
+$nephritis:     #27ae60
+$belize-hole:   #2980b9
+$wisteria:      #8e44ad
+$midnight-blue: #2c3e50
+$sun-flower:    #f1c40f
+$carrot:        #e67e22
+$alizarin:      #e74c3c
+$clouds:        #ecf0f1
+$concrete:      #95a5a6
+$orange:        #f39c12
+$pumpkin:       #d35400
+$pomegranate:   #c0392b
+$silver:        #bdc3c7
+$asbestos:      #7f8c8d
+
+$background-light:  #f7fbff
+$background-normal: #eaedf1
+$background-dark:   #dfe2e6
+$shadow:            #c5cbd3
+
+// Grubości czcionki
+$hairline: 100
+$light:    300
+$normal:   400
+$bold:     700
+$black:    900
+
+body
+  margin: 0
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif
+  font-size: 24px
+  background: $background-dark
+  font-weight: $light
+  height: 2000px
+
+a
+  text-decoration: none
+
+.wrapper
+  float: left
+  width: 100%
+  padding-bottom: 32px
+  border-bottom: 4px solid $shadow
+  background: $background-normal
+  &:first-child
+    padding-top: 32px
+    &::before
+      display: none
+    &::after
+      display: none
+
+  &:last-child
+    border-bottom: none
+  &.light
+    background: url(../img/header-pattern.png) 0 40px repeat-x, $background-light
+  &.dark
+    background: $background-dark
+    &::after
+      border-top-color: $background-normal
+
+  &::before
+    content: ""
+    display: block
+    border-top: 8px solid $shadow
+    border-left: 16px solid transparent
+    border-right: 16px solid transparent
+    height: 0
+    margin: 0 auto
+    width: 1080px
+  &::after
+    content: ""
+    display: block
+    border-top: 8px solid $background-light
+    border-left: 16px solid transparent
+    border-right: 16px solid transparent
+    height: 0
+    margin: -12px auto
+    width: 1080px
+
+.page-header
+  font-size: 67px
+  font-weight: $normal
+  color: $alizarin
+  padding: 66px 0
+  text-indent: 232px
+  background: url(../img/logo.png) top left no-repeat
+  span
+    color: $silver
+
+.introduction
+  font-size: 32px
+  text-align: justify
+  margin-top: 32px
+  span
+    color: $pumpkin
+    font-weight: $normal
+
+
+.page-section
+  display: block
+  margin-top: 32px
+  header 
+    padding: 2px 0 4px 0
+    border-radius: 4px 4px 0 0
+    background: $wet-asphalt
+    text-align: center
+    font-weight: $normal
+    color: $white
+  p
+    text-align: justify
+    background: $white
+    padding: 8px
+    margin: 0
+    border-radius: 0 0 4px 4px
+
+.icon
+  display: inline-block
+  border-radius: 4px
+  border: 1px solid $midnight-blue
+  padding: 35px 0
+  width: 199px
+  background: $background-normal
+  text-align: center
+  margin-left: 4px
+  color: $midnight-blue
+  text-shadow: 0 1px 0 #FFF
+  &:first-child
+    margin-left: 0
+  i, img
+    font-size: 96px
+    display: block
+  img
+    margin: 0 auto
+    padding-bottom: 7px
+  label
+    cursor: inherit
+    display: inline-block
+  &:hover
+    background: $background-light
+    color: $wet-asphalt
+  &.wide
+    width: 182px
+
+.section-img
+  border-radius: 4px
+  border: 2px solid $background-normal
+  display: inline-block
+  margin-left: 4px
+  height: 188px
+  width: 154px
+  background-image: url(../img/footer-items.png)
+  &:hover
+    -webkit-filter: invert(10%)
+
+  &:first-child
+    margin-left: 0
+  &.w2
+    width: 324px
+  
+  &#lyah
+    background-position: 0 0
+
+  &#rwh
+    background-position: -154px 0
+
+  &#code
+    background-position: -308px 0
+
+  &#warsaw
+    background-position: -616px 0
+
+  &#cracov
+    background-position: -770px 0
+
+#haskell 
+  margin-top: 4px
+  margin-bottom: -4px
+
+.links
+  margin: -4px 0 0 0
+  list-style: none
+  padding: 0
+  li:last-child a
+    border-radius: 0 0 4px 4px
+  a
+    display: block
+    background: $white
+    font-size: 20px
+    padding: 4px 8px
+    color: $wet-asphalt
+    border-top: 2px solid $background-normal
+    &:hover
+      color: $white
+      background: $asbestos
+  i
+    margin-right: 5px
+    text-align: center
+    display: inline-block
+    width: 20px
+
+.page-footer
+  margin-top: 32px
+  text-align: center
+  color: $asbestos
+  font-size: 20px
